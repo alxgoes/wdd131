@@ -1,0 +1,93 @@
+body {
+    font-family: 'Playfair Display', serif; /* Fonte elegante */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #14324e;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#menu-toggle {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    display: block; 
+}
+
+.nav {
+    display: none; 
+}
+
+.nav.active {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.nav ul li {
+    margin: 0 10px; 
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #ddd; 
+    color: black;
+    text-decoration: underline; 
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.temple-image {
+    width: 100%; 
+    height: auto; 
+}
+
+.temple-caption {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px; 
+}
+
+.footer {
+    background-color: #14324e;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}

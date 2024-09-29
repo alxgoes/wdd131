@@ -1,0 +1,20 @@
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none; /* Esconde o botão de menu em telas grandes */
+    }
+
+    .nav {
+        display: block; /* Mostra o menu de navegação */
+    }
+
+    .nav ul {
+        display: flex; /* Alinha os itens em uma linha */
+        justify-content: center; /* Centraliza os itens */
+    }
+
+    .gallery {
+        display: grid; /* Mantém o grid */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Múltiplas colunas */
+        gap: 20px; /* Espaço entre as imagens */
+    }
+}
