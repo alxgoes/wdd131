@@ -1,20 +1,20 @@
 @media (min-width: 768px) {
     #menu-toggle {
-        display: none; /* Esconde o botão de menu em telas grandes */
+        display: none; 
     }
 
     .nav {
-        display: block; /* Mostra o menu de navegação */
+        display: block;
     }
 
     .nav ul {
-        display: flex; /* Alinha os itens em uma linha */
-        justify-content: center; /* Centraliza os itens */
+        display: flex; 
+        justify-content: center; 
     }
 
     .gallery {
-        display: grid; /* Mantém o grid */
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Múltiplas colunas */
-        gap: 20px; /* Espaço entre as imagens */
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+        gap: 20px; 
     }
 }
