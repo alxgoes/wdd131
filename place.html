@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netherlands</title>
+    <meta name="description" content="Hey there! I'm Alex Goes, this is my project from WDD131 and you can see my favorite country."> 
+    <meta name="author" content="Alex Goes"> 
+    <link rel="stylesheet" href="styles/place.css"> 
+    <script src="scripts/place.js" defer></script> 
+</head>
+<body>
+    <div class="header">
+        Netherlands
+    </div>
+    <div class="content">
+        <picture>
+            <source media="(max-width: 600px)" srcset="images/netherlands.webp" type="image/webp">
+            <source media="(min-width: 601px)" srcset="images/netherlands.jpg">
+            <img alt="A green grass field in the Netherlands" height="800" width="1200" src="images/green-grass-field.jpg">
+        </picture>
+        <div class="data">
+            <h2>Facts🌷</h2>
+            <p><strong>Area:</strong> 41,543 km²</p>
+            <p><strong>Population:</strong> 17,407,585</p>
+            <p><strong>Capital:</strong> Amsterdam</p>
+            <p><strong>Languages:</strong> Dutch</p>
+            <p><strong>Currency:</strong> Euro (€)</p>
+            <p><strong>Time Zone:</strong> UTC+1 (CET)</p>
+            <p><strong>Dialing Code:</strong> +31</p>
+            <p><strong>Internet TLD:</strong> .nl</p>
+        </div>
+        <div class="weather">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <p><strong>Temperature:</strong> <span id="temperature">12</span>°C</p>
+            <p><strong>Conditions:</strong> Cloudy</p>
+            <p><strong>Wind:</strong> <span id="wind-speed">15</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="wind-chill">10.5</span>°C</p>
+        </div>
+    </div>
+    <div class="footer">
+        ©<span id="current-year"></span> 🎃 Alex Goes 🎃 Netherlands<br/>
+        Last Modified: <span id="last-modified"></span>
+    </div>
+</body>
+</html>
