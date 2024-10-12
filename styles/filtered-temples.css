@@ -27,7 +27,7 @@ body {
     right: 1rem;
     cursor: pointer;
     display: block;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .nav {
@@ -75,7 +75,7 @@ body {
     margin: 1rem;
     width: 300px;
     text-align: center;
-    flex: 0 1 calc(33.333% - 2rem); 
+    flex: 0 1 calc(33.333% - 2rem);
 }
 
 .temple-card img {

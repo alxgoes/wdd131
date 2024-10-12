@@ -19,6 +19,6 @@
         flex-wrap: nowrap;
     }
     .temple-card {
-        flex: 0 1 calc(25% - 2rem); 
+        flex: 0 1 calc(25% - 2rem);
     }
 }
