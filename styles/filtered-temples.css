@@ -9,6 +9,7 @@ body {
     color: white;
     padding: 15px;
     text-align: center;
+    position: relative;
 }
 
 .header h1 {
@@ -25,17 +26,18 @@ body {
     top: 1rem;
     right: 1rem;
     cursor: pointer;
-    display: block; 
+    display: block;
+    z-index: 1; 
 }
 
 .nav {
-    display: none; 
+    display: none;
 }
 
 .nav.active {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .nav ul {
@@ -43,9 +45,8 @@ body {
     padding: 0;
 }
 
-
 .nav ul li {
-    margin: 0 10px; 
+    margin: 0 10px;
 }
 
 .nav a {
@@ -54,35 +55,34 @@ body {
 }
 
 .nav a:hover {
-    background-color: #ddd; 
+    background-color: #ddd;
     color: black;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .content {
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.gallery {
-    display: grid; 
-    grid-template-columns: 1fr; 
-    gap: 20px; 
-}
-
-.gallery-item {
+.temple-card {
+    border: 1px solid #ccc;
+    background-color: #7d868e;
+    padding: 2rem;
+    margin: 1rem;
+    width: 300px;
     text-align: center;
+    flex: 0 1 calc(33.333% - 2rem); 
 }
 
-.temple-image {
-    width: 100%; 
-    height: auto; 
-}
-
-.temple-caption {
-    font-size: 18px;
-    color: black;
-    margin-top: 10px; 
+.temple-card img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ffeaea;
+    border-radius: 1rem;
 }
 
 .footer {
