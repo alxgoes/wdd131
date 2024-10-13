@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function displayTemples(temples) {
         const mainContent = document.querySelector('.content');
         mainContent.innerHTML = "";
-
+    
         temples.forEach(temple => {
             const templeCard = document.createElement('div');
             templeCard.className = 'temple-card';
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
             mainContent.appendChild(templeCard);
         });
-    }
+    }    
 
     document.querySelectorAll('.nav a').forEach(link => {
         link.addEventListener('click', function(event) {

@@ -61,28 +61,54 @@ body {
 }
 
 .content {
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-items: center;
 }
 
 .temple-card {
-    border: 1px solid #ccc;
     background-color: #7d868e;
-    padding: 2rem;
-    margin: 1rem;
-    width: 300px;
+    border: 8px solid #14324e;
+    border-radius: 1rem;
     text-align: center;
-    flex: 0 1 calc(33.333% - 2rem);
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; 
+}
+
+.temple-card h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0.5rem 0;
 }
 
 .temple-card img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ffeaea;
-    border-radius: 1rem;
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    border-radius: 0.5rem;
+}
+
+.temple-card p {
+    font-size: 0.9rem;
+    color: white;
+    margin: 0.3rem 0;
+    line-height: 1.2;
+}
+
+.temple-card p strong {
+    color: #ffebcd; 
+}
+
+@media (min-width: 768px) {
+    .content {
+        padding: 40px;
+    }
 }
 
 .footer {
