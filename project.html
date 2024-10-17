@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Company employee portfolio showcasing skills, projects, and professional achievements.">
+    <title>Employee Portfolio</title>
+    <link rel="stylesheet" href="styles/project.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Employee Portfolio</h1>
+            <p>Discover the skills and creativity that power our team.</p>
+            <h2>We Build Solutions</h2>
+            <p>Our diverse team delivers cutting-edge designs, web solutions, and creative strategies to help businesses thrive.</p>
+            <a href="#team" class="cta-btn">Meet Our Team</a>
+        </div>
+    </section>
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img data-src="employee1.jpg" alt="Employee 1" class="lazy">
+                <h3>John Smith</h3>
+                <p>Graphic Designer</p>
+            </div>
+            <div class="team-member">
+                <img data-src="employee2.jpg" alt="Employee 2" class="lazy">
+                <h3>Jane Doe</h3>
+                <p>Web Developer</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Contact us for more information about our team or projects.</p>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>© 2024 Company. All rights reserved.</p>
+        <p id="modification-date"></p> 
+    </footer>
+    <script src="scripts/script.js"></script> 
+</body>
+</html>
