@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Elemin Doe": {
             role: "DevOps Engineer",
             bio: "Elemin is an expert in cloud infrastructure and automation, ensuring seamless deployment and robust systems.",
-            imgSrc: "images/elemin.png",
+            imgSrc: "images/ELEMIN.png",
             socialLinks: {
                 instagram: "https://instagram.com/",
                 twitter: "https://twitter.com/",
