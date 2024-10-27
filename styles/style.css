@@ -2,12 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Ensure body takes at least full height */
+    min-height: 100vh; 
     display: flex;
-    flex-direction: column; /* Allow footer to stay at the bottom */
+    flex-direction: column; 
 }
 
-/* Navbar Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -49,18 +48,11 @@ header {
     margin: 4px 0;
 }
 
-.nav-links.active {
-    display: flex; /* Mostra o menu quando ativo */
-    transform: translateY(0); /* Animação de deslizar para baixo */
-}
-
-/* Hero Section */
 .hero {
-    flex: 1; /* Allow hero section to take available space */
+    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(' images/background.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
 }
@@ -99,14 +91,13 @@ header {
     background-color: #ff9900;
 }
 
-/* Team Section */
-#team {
+#team, #contact {
     padding: 60px 20px;
     background-color: #f9f9f9;
     text-align: center;
 }
 
-#team h2 {
+#team h2, #contact h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
@@ -132,22 +123,6 @@ header {
 .team-member h3 {
     font-size: 24px;
     margin: 10px 0;
-}
-
-.description {
-    font-size: 16px;
-}
-
-/* Contact Section */
-#contact {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 #contact p {
@@ -194,10 +169,10 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    position: fixed; /* Make the footer fixed */
-    bottom: 0; /* Position it at the bottom */
+    position: fixed;
+    bottom: 0; 
     left: 0;
-    right: 0; /* Ensure it spans the full width */
+    right: 0; 
 }
 
 footer p {
@@ -205,7 +180,7 @@ footer p {
 }
 
 .modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed; 
     z-index: 1000; 
     left: 0;
@@ -225,7 +200,7 @@ footer p {
 }
 
 .close-btn {
-    color: #aaa;
+ color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -238,7 +213,6 @@ footer p {
     cursor: pointer;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -253,55 +227,24 @@ footer p {
         transition: transform 0.5s ease-in;
     }
 
-/* Navbar Styles */
-.nav-links {
-    list-style: none;
-    display: flex; /* Mantenha o menu visível em telas grandes */
-    gap: 20px;
-}
-
-.nav-links.active {
-    display: flex; /* Mostra o menu quando ativo */
-    transform: translateY(0); /* Animação de deslizar para baixo */
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Esconde o menu padrão em telas menores */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Ajuste conforme necessário */
-        right: 0;
-        background-color: #fff;
-        padding: 20px;
-        border: 1px solid #ccc;
-        width: 200px;
-        transition: transform 0.5s ease-in;
-    }
-
     .nav-links.active {
-        display: flex; /* Mostra o menu quando ativo */
-        transform: translateY(0); /* Animação de deslizar para baixo */
+        display: flex; 
+        transform: translateY(0); 
     }
 
     .hamburger {
-        display: flex; /* Mostra o ícone do hambúrguer em telas menores */
-    }
-}
-
-    .hamburger {
-        display: flex;
+        display: flex; 
     }
 
     .hero-content h1 {
-        font-size: 36px; /* Adjusted for smaller screens */
+        font-size: 36px; 
     }
 
     .hero-content h2 {
-        font-size: 24px; /* Adjusted for smaller screens */
+        font-size: 24px; 
     }
 
     .hero-content p {
-        font-size: 16px; /* Adjusted for smaller screens */
+        font-size: 16px; 
     }
 }
