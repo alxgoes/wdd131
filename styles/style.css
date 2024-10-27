@@ -1,0 +1,307 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure body takes at least full height */
+    display: flex;
+    flex-direction: column; /* Allow footer to stay at the bottom */
+}
+
+/* Navbar Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+.nav-links.active {
+    display: flex; /* Mostra o menu quando ativo */
+    transform: translateY(0); /* Animação de deslizar para baixo */
+}
+
+/* Hero Section */
+.hero {
+    flex: 1; /* Allow hero section to take available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(' images/background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-btn:hover {
+    background-color: #ff9900;
+}
+
+/* Team Section */
+#team {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#team h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 16px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form label {
+    font-size: 18px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #ff9900;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed; /* Make the footer fixed */
+    bottom: 0; /* Position it at the bottom */
+    left: 0;
+    right: 0; /* Ensure it spans the full width */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        width: 200px;
+        transition: transform 0.5s ease-in;
+    }
+
+/* Navbar Styles */
+.nav-links {
+    list-style: none;
+    display: flex; /* Mantenha o menu visível em telas grandes */
+    gap: 20px;
+}
+
+.nav-links.active {
+    display: flex; /* Mostra o menu quando ativo */
+    transform: translateY(0); /* Animação de deslizar para baixo */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconde o menu padrão em telas menores */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário */
+        right: 0;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        width: 200px;
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostra o menu quando ativo */
+        transform: translateY(0); /* Animação de deslizar para baixo */
+    }
+
+    .hamburger {
+        display: flex; /* Mostra o ícone do hambúrguer em telas menores */
+    }
+}
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 36px; /* Adjusted for smaller screens */
+    }
+
+    .hero-content h2 {
+        font-size: 24px; /* Adjusted for smaller screens */
+    }
+
+    .hero-content p {
+        font-size: 16px; /* Adjusted for smaller screens */
+    }
+}
