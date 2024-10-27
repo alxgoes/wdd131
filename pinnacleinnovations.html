@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Company employee portfolio showcasing skills, projects, and professional achievements.">
+    <meta name="author" content="Alex Goes"> 
     <title>Employee Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/project.css"> 
 </head>
 <body>
     <header>
         <nav>
+            <div class="logo">
+                <a href="#home">Pinnacle Innovations</a>
+            </div>
             <div class="hamburger" id="hamburger">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -35,17 +40,32 @@
         <h2>Our Team</h2>
         <div class="team-grid">
             <div class="team-member">
-                <img data-src="employee1.jpg" alt="Employee 1" class="lazy">
-                <h3>John Smith</h3>
-                <p>Graphic Designer</p>
+                <img data-src="images/blimblimjonas.png" alt="Blim Smith" class="lazy">
+                <h3>Blim Smith</h3>
+                <p>Web Designer</p>
             </div>
             <div class="team-member">
-                <img data-src="employee2.jpg" alt="Employee 2" class="lazy">
-                <h3>Jane Doe</h3>
-                <p>Web Developer</p>
+                <img data-src="images/thg.png" alt="Tiaguru San" class="lazy">
+                <h3>Tiaguru San</h3>
+                <p>Software Engineer</p>
+            </div>
+            <div class="team-member">
+                <img data-src="images/elemin.png" alt="Elemin Doe" class="lazy">
+                <h3>Elemin Doe</h3>
+                <p>DevOps Engineer</p>
+            </div>
+            <div class="team-member">
+                <img data-src="images/fakeyan.png" alt="Yan Bond" class="lazy">
+                <h3>Yan Bond</h3>
+                <p>Data Analyst</p>
             </div>
         </div>
     </section>
+    <div class="modal" id="team-modal">
+        <div class="modal-content" id="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+        </div>
+    </div>
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Contact us for more information about our team or projects.</p>

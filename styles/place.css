@@ -104,3 +104,16 @@ header {
     padding: 10px 0;
     font-size: 20px;
 }
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 10px;
+    height: 0px;
+}

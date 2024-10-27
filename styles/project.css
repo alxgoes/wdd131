@@ -1,26 +1,37 @@
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth; /* Suave transição ao rolar a página */
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #e9ecef;
     color: #333;
     line-height: 1.6;
 }
 
-/* Header and Navigation */
 header {
     position: fixed;
     width: 100%;
-    background-color: #1d1d1d;
+    background-color: #fff;
     padding: 10px 20px;
     z-index: 10;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px; 
+    font-weight: bold;
+    text-decoration: none;
+    color: #333; 
 }
 
 .nav-links {
@@ -31,37 +42,36 @@ header {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 30px; 
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500; 
+    transition: color 0.3s ease, transform 0.2s;
 }
 
 .nav-links a:hover {
     color: #ffcc00;
+    transform: scale(1.05);
 }
 
-/* Hamburger Menu */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    z-index: 11; /* Ensure it appears above other elements */
 }
 
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #333;
     margin: 4px;
     transition: all 0.3s ease;
 }
 
-/* Transformação das barras para o "X" */
 .hamburger.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -74,10 +84,9 @@ header {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
-    background-color: #333; /* Cor de fundo escura para maior contraste */
+    background-color: #333; 
     color: white;
     display: flex;
     align-items: center;
@@ -122,7 +131,6 @@ header {
     background-color: #ff9900;
 }
 
-/* Team Section */
 #team {
     padding: 80px 20px;
     background-color: #fff;
@@ -137,14 +145,15 @@ header {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: center;
 }
 
 .team-member {
+    flex: 1 1 300px; 
+    max-width: 300px; 
     text-align: center;
     background: #f9f9f9;
     padding: 20px;
@@ -164,10 +173,63 @@ header {
     margin-bottom: 20px;
 }
 
-/* Contact Section */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+}
+
 #contact {
     padding: 80px 20px;
-    background-color: #343a40; /* Fundo escuro */
+    background-color: #343a40;
     color: white;
     text-align: center;
 }
@@ -175,32 +237,56 @@ header {
 #contact h2 {
     font-size: 36px;
     margin-bottom: 40px;
+    color: #ffcc00;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
 form {
     max-width: 600px;
     margin: 0 auto;
+    text-align: left;
 }
 
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #ffcc00;
 }
 
-input, textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ffcc00;
+    background-color: #ffffff;
 }
 
 button {
-    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    padding: 12px;
     background-color: #ffcc00;
     color: #333;
     border: none;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -210,47 +296,35 @@ button:hover {
     background-color: #ff9900;
 }
 
-/* Footer */
 footer {
     padding: 20px;
     background-color: #1d1d1d;
     color: white;
     text-align: center;
+    font-size: 14px;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        right: 0;
-        top: 0;
-        height: 100%;
-        background-color: #1d1d1d;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 60%; /* Ajusta o tamanho do menu */
-        transform: translateX(100%);
-        transition: transform 0.5s ease;
-    }
-
-    .nav-links.active {
-        transform: translateX(0);
-    }
-
-    .hamburger {
-        display: flex;
-        position: absolute;
-        right: 20px;
-    }
-
-    .nav-links li {
-        margin: 20px 0;
-    }
+.modal-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center; 
 }
 
-@media (min-width: 769px) {
-    .hamburger {
-        display: none;
-    }
+.social-links {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 10px; 
+}
+
+
+.social-links img {
+    width: 34px; 
+    height: 34px; 
+    transition: transform 0.2s; 
+}
+
+.social-links img:hover {
+    transform: scale(1.1); 
 }
